@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const IconText = (props) => {
     const {data} = props; // data = {icon , text}
-    const [icon , setIcon] = useState(data.icon);
+    const [Icon , setIcon] = useState(data.icon);
 
 
 
@@ -13,7 +13,7 @@ const IconText = (props) => {
     
     return ( 
         <div style={divStyle} >
-            <img src={icon} style={imgStyle}/> {data.text}
+            <Icon style={imgStyle}/> {data.text}
         </div>
      );
 }

@@ -1,27 +1,27 @@
 import React from 'react';
 
-import WindowPanel from './windowPanel';
+import WindowPanel from './utility/windowPanel';
 import MenuBar from './utility/menuBar';
 
-import homeIcon from '../assets/icons/home.svg'
-import crisisIcon from '../assets/icons/crisisAlert.svg'
-import databaseIcon from '../assets/icons/database.svg'
-import settingsIcon from '../assets/icons/settings.svg'
-import support from '../assets/icons/support.svg'
-import instruction from '../assets/icons/instruction.svg'
-import eythorLogo from '../assets/icons/eythorLogo.svg'
+import {ReactComponent as HomeIcon} from '../assets/icons/home.svg'
+import {ReactComponent as CrisisIcon} from '../assets/icons/crisisAlert.svg'
+import {ReactComponent as DatabaseIcon} from '../assets/icons/database.svg'
+import {ReactComponent as SettingsIcon} from '../assets/icons/settings.svg'
+import {ReactComponent as Support} from '../assets/icons/support.svg'
+import {ReactComponent as Instruction} from '../assets/icons/instruction.svg'
+import {ReactComponent as EythorLogo} from '../assets/icons/eythorLogo.svg'
 
 
 const windowData = [
-    {icon:homeIcon, text:'Home' },
-    {icon:crisisIcon, text:'Troubleshoot' },
-    {icon:databaseIcon, text:'Database' },
-    {icon:settingsIcon, text:'Set Parameters' },
+    {icon:HomeIcon, text:'Home' },
+    {icon:CrisisIcon, text:'Troubleshoot' },
+    {icon:DatabaseIcon, text:'Database' },
+    {icon:SettingsIcon, text:'Set Parameters' },
 ];
 
 const supportData = [
-    {icon:support, text:'Instructions' },
-    {icon:instruction, text:'Support Desk' },
+    {icon:Support, text:'Instructions' },
+    {icon:Instruction, text:'Support Desk' },
 ]
 
 
@@ -36,8 +36,7 @@ const LeftPane = (props) => {
 
             <div style={{display:'flex',paddingTop:'2rem'}}>
             <MenuBar style={{marginLeft:'1rem'}}/> 
-            <img src={eythorLogo} alt="eythorLogo" style={logoStyle}/>
-
+            <EythorLogo style={logoStyle}/>
             </div>
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import IconText from './utility/iconText';
+import IconText from './iconText';
 
 
 const WindowPanel = (props) => {
