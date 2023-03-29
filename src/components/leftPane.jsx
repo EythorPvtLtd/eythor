@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useState } from 'react';
+
 import WindowPanel from './utility/windowPanel';
 import MenuBar from './utility/menuBar';
 
@@ -12,24 +14,28 @@ import {ReactComponent as Instruction} from '../assets/icons/instruction.svg'
 import {ReactComponent as EythorLogo} from '../assets/icons/eythorLogo.svg'
 
 
-const windowData = [
-    {icon:HomeIcon, text:'Home' },
-    {icon:CrisisIcon, text:'Troubleshoot' },
-    {icon:DatabaseIcon, text:'Database' },
-    {icon:SettingsIcon, text:'Set Parameters' },
-];
-
-const supportData = [
-    {icon:Support, text:'Instructions' },
-    {icon:Instruction, text:'Support Desk' },
-]
 
 
 
 const LeftPane = (props) => {
-
+    
+    const {handleSetSection} = props;
+    
     if(props.style)
     LeftPaneStyle = {...LeftPaneStyle , ...props.style}
+    
+    const windowData = [
+        {icon:HomeIcon, text:'Home',handleOnClick:()=>{handleSetSection('Home')}},
+        {icon:CrisisIcon, text:'Troubleshoot',handleOnClick:()=>{handleSetSection('Troubleshoot')}},
+        {icon:DatabaseIcon, text:'Database' },
+        {icon:SettingsIcon, text:'Set Parameters' },
+    ];
+    
+    const supportData = [
+        {icon:Support, text:'Instructions' },
+        {icon:Instruction, text:'Support Desk' },
+    ]
+    
 
     return (
         <div style={LeftPaneStyle}>
@@ -40,8 +46,8 @@ const LeftPane = (props) => {
             </div>
 
 
-            <WindowPanel style={{marginTop:'1rem'}}rowData={windowData}/>
-            <WindowPanel style={{ position: 'absolute',bottom:'4rem'}}rowData={supportData}/>
+            <WindowPanel style={{marginTop:'1rem'}} rowData={windowData}/>
+            <WindowPanel style={{ position: 'absolute',bottom:'4rem'}} rowData={supportData}/>
         </div> 
      );
 }

@@ -8,7 +8,7 @@ const WindowPanel = (props) => {
 
     return ( 
         <div style={style}>
-            {rowData.map((row,idx)=>(<IconText key={idx}data={row}/>))}
+            {rowData.map((row,idx)=>(<IconText key={idx} data={row}/>))}
         </div>
     );
 }
