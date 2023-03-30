@@ -27,7 +27,7 @@ const LeftPane = (props) => {
     const windowData = [
         {icon:HomeIcon, text:'Home',handleOnClick:()=>{handleSetSection('Home')}},
         {icon:CrisisIcon, text:'Troubleshoot',handleOnClick:()=>{handleSetSection('Troubleshoot')}},
-        {icon:DatabaseIcon, text:'Database' },
+        {icon:DatabaseIcon, text:'Database',handleOnClick:()=>{handleSetSection('Database')} },
         {icon:SettingsIcon, text:'Set Parameters' },
     ];
     
@@ -61,12 +61,13 @@ let LeftPaneStyle = {
     position: 'relative',
     borderRight:'1px solid #D9D9D9',
     boxShadow: '2px 4px 4px rgba(0, 0, 0, 0.25)',
+    backgroundColor:'#FFFFFF',
 }
 
 let logoStyle = {
-    marginLeft: '2rem',
-    width:'6.6rem',
-    height:'1.5rem',
+    marginLeft: '0.5rem',
+    width:'12rem',
+    // height:'1.5rem',
 
 }
 

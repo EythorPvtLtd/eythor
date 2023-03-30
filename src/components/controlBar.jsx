@@ -32,6 +32,13 @@ const ControlBar = (props) => {
     };
 
 
+    const controlBarStyle = {
+        display:'flex',
+        gap: '0.6rem',
+        position:'absolute',
+        left: '38.89%',
+        bottom: '7.43%',
+    }
 
 
     return ( 
@@ -47,12 +54,5 @@ const ControlBar = (props) => {
     );
 }
  
-const controlBarStyle = {
-    display:'flex',
-    gap: '0.6rem',
-    position:'absolute',
-    left: '38.89%',
-    bottom: '7.43%',
-}
 
 export default ControlBar;

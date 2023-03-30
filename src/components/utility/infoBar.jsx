@@ -6,6 +6,7 @@ const InfoBar = (props) => {
         <div style={infoBarStyle}>
             <input type="checkbox" className={checkboxStyle}/>
             <div>G34R12389</div>
+            <div className={border}/>
             <div>Brush Replacement </div>
             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
             <div>Time - 2:30 pm  </div>
@@ -24,6 +25,12 @@ box-sizing: border-box;
 background: #FFFFFF;
 border: 3px solid #000000;
 border-radius: 5px;
+`
+
+const border = css`
+    Float:left;
+    width:1px; /* edit this if you want */
+    background-color:black;
 `
 
 
